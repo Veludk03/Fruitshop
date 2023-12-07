@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LET method</title>
+    </head>
+    <center><body style="background-image:url(Fruit.avif);background-size:cover;color:rgb(33, 25, 25)">
+        <h1>WELCOME TO FRUITSHOP!!!</h1>
+        <marquee><h1 style="color:rgb(114, 94, 6)">VARIETY FRUITS ARE AVAILABLE!</h1></marquee>
+        <b><p id="demo"></p></b>
+        <h1>FRUITS DETAILS</h1>
+        <table border="0" cellpadding="15">
+            <tr><td><b> Fruit Name</b></td> 
+                <td><input type="textbox" id="Fruit Name"></td></tr>
+            <tr><td><b>price</b></td>
+                <td><input type="textbox" id="price"></td></tr>
+            <tr><td><b>Count</b></td>
+            <td><input type="textbox" id="count"></td></tr></table>
+            <br><button onclick="multiply()">multiply</button>  <button onclick="clear">clear</button>
+            <span id="result"></span>
+            <script>
+                function multiply(){
+                    let fruitname=document.getElementById("Fruit Name").value;
+                    let price=document.getElementById("price").value;
+                    let count=document.getElementById("count").value;
+                    if (fruitname===""||price===""||count==""){
+                        alert('please fill all fields');
+                    }else{
+                        document.getElementById("result").innerHTML='the total amount is ${parseInt(price)*parseInt(count)}';
+                        document.getElementById("result").innerHTML = "the total amount is" +(parseInt(price)*parseInt(count));
+                    }
+                }
+            </script>
+        </center>
+    </body>
+</html>
